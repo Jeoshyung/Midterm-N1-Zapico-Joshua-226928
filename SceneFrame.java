@@ -17,8 +17,9 @@ of my program.
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class SceneFrame {
+public class SceneFrame implements KeyListener {
 
   private JFrame f;
   private int width;
@@ -43,6 +44,38 @@ public class SceneFrame {
     f.pack();
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     f.setVisible(true);
+    f.addKeyListener(this);
+    
+    //Music
+    Music.runMusic("Le Festin.wav");
+  }
+
+  @Override
+  public void keyTyped(KeyEvent e) {
+
+  }
+  
+  @Override
+  public void keyPressed(KeyEvent e) {
+    int keyCode = e.getKeyCode();
+    switch(keyCode) {
+
+      // Left Arrow Key
+      case KeyEvent.VK_LEFT:
+        sceneCanvas.getRat().move(-15);
+        sceneCanvas.repaint();
+        break;
+
+      // Right Arrow Key
+      case KeyEvent.VK_RIGHT: 
+        sceneCanvas.getRat().move(15);
+        sceneCanvas.repaint();
+        break;
+    } 
+  }
+  @Override
+  public void keyReleased(KeyEvent e) {
+
   }
 
 }

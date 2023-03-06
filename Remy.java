@@ -20,6 +20,7 @@ import java.awt.geom.*;
 
 public class Remy implements DrawingObject {
 
+    private int x;
     private Triangle ear1;
     private Triangle ear2;
     private Circle head;
@@ -29,21 +30,23 @@ public class Remy implements DrawingObject {
     private Circle eye2;
     private Rectangle leg1;
     private Rectangle leg2;
-    private Rectangle chef;
+    private Triangle nose;
     
     public Remy() {
-        ear1 = new Triangle(605,520,620,500,610,490,215,163,139);
-        ear2 = new Triangle(645,520,630,500,640,490,215,163,139);
-        tail = new Triangle(480,550,540,555,540,540,215,163,139);
-        head = new Circle(600,500,50,50,52,64,92);
-        body = new Circle(525,520,100,50,52,64,92);
-        eye1 = new Circle(615,520,5,5,0,0,0);
-        eye2 = new Circle(635,520,5,5,0,0,0);
-        leg1 = new Rectangle(600,550,5,30,215,163,139);
-        leg2 = new Rectangle(545,550,5,30,215,163,139);
+
     }
 
     public void draw(Graphics2D g2d, AffineTransform reset) {
+        ear1 = new Triangle(605+x,520,620+x,500,610+x,490,215,163,139);
+        ear2 = new Triangle(645+x,520,630+x,500,640+x,490,215,163,139);
+        tail = new Triangle(480+x,550,540+x,555,540+x,540,215,163,139);
+        head = new Circle(600+x,500,50,50,52,64,92);
+        body = new Circle(525+x,520,100,50,52,64,92);
+        eye1 = new Circle(615+x,520,5,5,0,0,0);
+        eye2 = new Circle(635+x,520,5,5,0,0,0);
+        leg1 = new Rectangle(600+x,550,5,30,215,163,139);
+        leg2 = new Rectangle(545+x,550,5,30,215,163,139);
+        nose = new Triangle(623+x,528,632+x,545,633+x,528,33,43,66);
         ear1.draw(g2d, reset);
         ear2.draw(g2d, reset);
         tail.draw(g2d, reset);
@@ -53,6 +56,11 @@ public class Remy implements DrawingObject {
         body.draw(g2d, reset);
         eye1.draw(g2d, reset);
         eye2.draw(g2d, reset);
+        nose.draw(g2d, reset);   
     }
+
+    public void move(int n) {
+        this.x += n;
+    };
 
 }

@@ -43,4 +43,9 @@ public class Rectangle implements DrawingObject {
         g2d.setColor(new Color(r,g,b));
         g2d.fill(rectangle);
     }
+
+    public void move(int n) {
+        x += n;
+    };
+    
 }

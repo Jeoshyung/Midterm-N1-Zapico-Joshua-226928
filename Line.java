@@ -43,5 +43,9 @@ public class Line implements DrawingObject {
         g2d.setColor(new Color(r,g,b));
         g2d.draw(line);
     }
+
+    public void move(int x) {
+
+    };
     
 }

@@ -41,4 +41,9 @@ public class Square implements DrawingObject {
         g2d.setColor(new Color(r,g,b));
         g2d.fill(square);
     }
+
+    public void move(int x) {
+        
+    };
+    
 }

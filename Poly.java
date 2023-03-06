@@ -57,4 +57,8 @@ public class Poly implements DrawingObject {
         g2d.fill(line);
     }
 
+    public void move(int x) {
+
+    };
+
 }

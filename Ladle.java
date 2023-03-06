@@ -35,4 +35,8 @@ public class Ladle implements DrawingObject {
         circle2.draw(g2d, reset);
     }
 
+    public void move(int n) {
+
+    };
+
 }

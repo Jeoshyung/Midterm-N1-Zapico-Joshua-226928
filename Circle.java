@@ -43,5 +43,9 @@ public class Circle implements DrawingObject {
         g2d.setColor(new Color(r,g,b));
         g2d.fill(ellipse);
     }
+    
+    public void move(int n) {
+        x += n;
+    };
 
 }

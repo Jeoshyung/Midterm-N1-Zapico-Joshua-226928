@@ -52,4 +52,8 @@ public class Triangle implements DrawingObject {
         g2d.fill(line);
     }
 
+    public void move(int x) {
+
+    };
+
 }

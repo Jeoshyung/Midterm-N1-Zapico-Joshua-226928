@@ -24,6 +24,7 @@ public class SceneCanvas extends JComponent {
     ArrayList<DrawingObject> shapes;
     private int width;
     private int height;
+    private Remy remy = new Remy();
 
     public SceneCanvas(int w, int h) {
         width = w;
@@ -33,9 +34,12 @@ public class SceneCanvas extends JComponent {
         // Background Color
         shapes.add(new Rectangle(0,0,1026,768,156,128,107));
         // Pot
-        shapes.add(new Rectangle(450,380,185,200,188,113,73));
+        shapes.add(new Pot());
+        // Salt n' Pepper
+        shapes.add(new Box(30,515,15,15,15,50,50,50));
+        shapes.add(new Box(90,515,255,255,255,200,200,200));
         // Remy
-        shapes.add(new Remy());
+        shapes.add(remy);
         // Cabinets
         shapes.add(new Rectangle(0,600,1026,200, 136,99,54));
         shapes.add(new Rectangle(0,575,1026,30,43,30,23));
@@ -60,9 +64,25 @@ public class SceneCanvas extends JComponent {
         shapes.add(new Rectangle(0,150,600,75,80,72,59));
         shapes.add(new Rectangle(0,145,610,40,127,80,36));
         shapes.add(new Poly(0,120,0,150,150,150,100,120,127,80,36));
+        // Orders
+        shapes.add(new Square(15,185,30,255,255,255));
+        shapes.add(new Square(55,185,30,255,255,255));
+        shapes.add(new Square(95,185,30,255,255,255));
+        shapes.add(new Square(135,185,30,255,255,255));
+        shapes.add(new Square(175,185,30,255,255,255));
+        shapes.add(new Square(215,185,30,255,255,255));
+        shapes.add(new Square(255,185,30,255,255,255));
+        shapes.add(new Square(295,185,30,255,255,255));
+        shapes.add(new Square(335,185,30,255,255,255));
+        shapes.add(new Square(375,185,30,255,255,255));
+        shapes.add(new Square(415,185,30,255,255,255));
+        shapes.add(new Square(455,185,30,255,255,255));
+        shapes.add(new Square(495,185,30,255,255,255));
+        shapes.add(new Square(535,185,30,255,255,255));
         // Ladle
         shapes.add(new Ladle(0));
         shapes.add(new Ladle(75));
+
     }
 
     @Override
@@ -76,4 +96,9 @@ public class SceneCanvas extends JComponent {
             element.draw(g2d, new AffineTransform());
         }
     }
+
+    public Remy getRat() {
+        return remy;
+    }
+
 }
