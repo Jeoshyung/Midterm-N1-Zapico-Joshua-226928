@@ -27,6 +27,9 @@ public class Remy implements DrawingObject {
     private Triangle tail;
     private Circle eye1;
     private Circle eye2;
+    private Rectangle leg1;
+    private Rectangle leg2;
+    private Rectangle chef;
     
     public Remy() {
         ear1 = new Triangle(605,520,620,500,610,490,215,163,139);
@@ -36,6 +39,8 @@ public class Remy implements DrawingObject {
         body = new Circle(525,520,100,50,52,64,92);
         eye1 = new Circle(615,520,5,5,0,0,0);
         eye2 = new Circle(635,520,5,5,0,0,0);
+        leg1 = new Rectangle(600,550,5,30,215,163,139);
+        leg2 = new Rectangle(545,550,5,30,215,163,139);
     }
 
     public void draw(Graphics2D g2d, AffineTransform reset) {
@@ -43,6 +48,8 @@ public class Remy implements DrawingObject {
         ear2.draw(g2d, reset);
         tail.draw(g2d, reset);
         head.draw(g2d, reset);
+        leg1.draw(g2d, reset);
+        leg2.draw(g2d, reset);
         body.draw(g2d, reset);
         eye1.draw(g2d, reset);
         eye2.draw(g2d, reset);

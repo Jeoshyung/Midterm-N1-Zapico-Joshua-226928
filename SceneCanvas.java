@@ -32,6 +32,10 @@ public class SceneCanvas extends JComponent {
         shapes = new ArrayList<DrawingObject>();
         // Background Color
         shapes.add(new Rectangle(0,0,1026,768,156,128,107));
+        // Pot
+        shapes.add(new Rectangle(450,380,185,200,188,113,73));
+        // Remy
+        shapes.add(new Remy());
         // Cabinets
         shapes.add(new Rectangle(0,600,1026,200, 136,99,54));
         shapes.add(new Rectangle(0,575,1026,30,43,30,23));
@@ -56,8 +60,9 @@ public class SceneCanvas extends JComponent {
         shapes.add(new Rectangle(0,150,600,75,80,72,59));
         shapes.add(new Rectangle(0,145,610,40,127,80,36));
         shapes.add(new Poly(0,120,0,150,150,150,100,120,127,80,36));
-        // Remy
-        shapes.add(new Remy());
+        // Ladle
+        shapes.add(new Ladle(0));
+        shapes.add(new Ladle(75));
     }
 
     @Override
