@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+The triangle class takes in 3 sets of coordinates to form a triangle, as well as rgb parameters in order to set a color.
+The draw method is responsible for generating the object and the move method allows the triangle to move.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

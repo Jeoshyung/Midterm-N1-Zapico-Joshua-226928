@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+This pot class generates the pot with the rectangle being the pot and the triangle being the soup.
+The draw method generates the pot and the move method allows it to move.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/
@@ -19,20 +20,22 @@ import java.awt.*;
 import java.awt.geom.*;
 
 public class Pot implements DrawingObject {
-    
+
     public Pot() {
 
     }
 
     public void draw(Graphics2D g2d, AffineTransform reset) {
+
         Rectangle pot = new Rectangle(450,380,185,200,188,113,73);
-        Triangle soup = new Triangle(460,390,620,390,540,400,200,130,90);
+        Triangle soup = new Triangle(460,390,620,390,540,400,200,130,90); 
         pot.draw(g2d, reset);
         soup.draw(g2d, reset);
+
     }
 
     public void move(int n) {
-
+        
     }
 
 }

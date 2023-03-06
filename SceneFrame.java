@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+The SceneFrame class contains the JFrame, container, and other essentials for the GUI. 
+The scene frame class also has methods to run animations via timers, key listeners, music etc.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/
@@ -46,10 +47,14 @@ public class SceneFrame implements KeyListener {
     f.setVisible(true);
     f.addKeyListener(this);
     
-    //Music
+    // Music
     Music.runMusic("Le Festin.wav");
+
+    // Timer
+    timer.start();
   }
 
+  // Keypress Animation
   @Override
   public void keyTyped(KeyEvent e) {
 
@@ -73,9 +78,22 @@ public class SceneFrame implements KeyListener {
         break;
     } 
   }
+  
   @Override
   public void keyReleased(KeyEvent e) {
 
   }
+
+  // Continuous Animation
+
+  ActionListener al = new ActionListener() { 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+      sceneCanvas.getSteam().anim();
+      sceneCanvas.repaint();
+    }
+  };
+
+  Timer timer = new Timer(600, al);
 
 }

@@ -1,5 +1,5 @@
 /**
-This is a template for a Java file.
+The SceneStarter class is responsible for generating the SceneFrame and to set up the GUI via the setUpGUI method.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

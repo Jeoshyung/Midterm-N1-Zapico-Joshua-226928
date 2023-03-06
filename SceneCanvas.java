@@ -1,5 +1,6 @@
 /**
 The SceneCanvas file is responsible for drawing out all of the shapes stored in the ArrayList shapes which contain different basic and composite shapes.
+It also returns Remy and Steam so that it can be used in SceneFrame where event handlers are present to do animations.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/
@@ -24,17 +25,21 @@ public class SceneCanvas extends JComponent {
     ArrayList<DrawingObject> shapes;
     private int width;
     private int height;
-    private Remy remy = new Remy();
+    private Remy remy;
+    private Steam steam;
 
     public SceneCanvas(int w, int h) {
         width = w;
         height = h;
+        remy = new Remy();
+        steam = new Steam(450,300);
         // Init ArrayList
         shapes = new ArrayList<DrawingObject>();
         // Background Color
         shapes.add(new Rectangle(0,0,1026,768,156,128,107));
         // Pot
         shapes.add(new Pot());
+        shapes.add(steam);
         // Salt n' Pepper
         shapes.add(new Box(30,515,15,15,15,50,50,50));
         shapes.add(new Box(90,515,255,255,255,200,200,200));
@@ -54,10 +59,10 @@ public class SceneCanvas extends JComponent {
         shapes.add(new Circle(960,650,50,50,144,107,65));
         shapes.add(new Rectangle(510,665,460,20,144,107,65));
         // Cabinet Handle Details
-        shapes.add(new Line(78,660,95,700,44,41,26));
-        shapes.add(new Line(120,660,102,700,44,41,26));
-        shapes.add(new Line(328,660,345,700,44,41,26));
-        shapes.add(new Line(370,660,352,700,44,41,26));
+        shapes.add(new Line(78,660,95,700,1,44,41,26));
+        shapes.add(new Line(120,660,102,700,1,44,41,26));
+        shapes.add(new Line(328,660,345,700,1,44,41,26));
+        shapes.add(new Line(370,660,352,700,1,44,41,26));
         // Towel Frontside
         shapes.add(new Rectangle(655,660,200,150,245,245,245));
         // Shelves
@@ -99,6 +104,10 @@ public class SceneCanvas extends JComponent {
 
     public Remy getRat() {
         return remy;
+    }
+
+    public Steam getSteam() {
+        return steam;
     }
 
 }

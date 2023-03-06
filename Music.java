@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+This music class is responsible for playing Le Festin and catching errors that might come up.
+The runMusic method gets a file path and plays the music, while volume is responsible for music volume.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/
@@ -32,8 +33,8 @@ public class Music {
             Clip clip = AudioSystem.getClip();
             clip.open(inputStream);
             clip.loop(Clip.LOOP_CONTINUOUSLY);
-            FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-            gainControl.setValue(-35.0f);
+            FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+            volume.setValue(-35.0f);
         } catch (UnsupportedAudioFileException err) {
             err.printStackTrace();
         } catch (IOException err) {

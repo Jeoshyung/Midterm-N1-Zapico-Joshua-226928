@@ -1,5 +1,7 @@
 /**
-This is a template for a Java file.
+The drawing object class is the interface used in all of the shape classes.
+The draw method uses Graphics2D and AffineTransform to generate shapes and
+the move method is responsible for moving objects along the x axis.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

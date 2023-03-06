@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+The line class takes in 2 sets of coordinates and a thickness to generate lines.
+The draw method generates the line while the move method allows the line to move.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/
@@ -27,8 +28,9 @@ public class Line implements DrawingObject {
     private int r;
     private int g;
     private int b;
+    private int thickness;
 
-    public Line(int x1, int y1, int x2, int y2, int r, int g, int b) {
+    public Line(int x1, int y1, int x2, int y2, int thickness, int r, int g, int b) {
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
@@ -36,10 +38,12 @@ public class Line implements DrawingObject {
         this.r = r;
         this.g = g;
         this.b = b;
+        this.thickness = thickness;
     }
 
     public void draw(Graphics2D g2d, AffineTransform reset) {
         Line2D.Double line = new Line2D.Double(x1, y1, x2, y2);
+        g2d.setStroke(new BasicStroke((float) thickness));
         g2d.setColor(new Color(r,g,b));
         g2d.draw(line);
     }

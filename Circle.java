@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+The circle class has a constructor which takes in input for x and y coordinates, rgb, as well as a customizable height and width.
+The draw method of the class displays the shape and the move method moves the circle.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

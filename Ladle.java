@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+The ladle class utilizes a rectangle and 2 circles to make a ladle.
+The draw method displays the ladle and the move method moves the ladle.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+This rectangle class takes in a starting set of coordinates, as well as width, height, and rgb in order to determine the rectangle's shape.
+The draw method is responsible for generating the shape and the move method allows it to move.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

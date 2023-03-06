@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+The square class takes a set of coordinates for its position, and a size value that makes it have equal sides.
+The draw method is responsible for drawing the square and the move method allows it to move.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

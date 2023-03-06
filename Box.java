@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+This class is a box that makes use of 2 polygon classes in order to make 3d looking objects. 
+The constructor has parameters that determine the placement of the box and its colors.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/

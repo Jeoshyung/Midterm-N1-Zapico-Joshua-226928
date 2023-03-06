@@ -1,5 +1,6 @@
 /**
-This is a template for a Java file.
+This class is a polygon that contains 4 sets of coordinates.
+The draw method is responsible for drawing the class and the move method allows the object to move.
 @author Joshua Paolo S. Zapico (226928)
 @version March 3, 2023
 **/
